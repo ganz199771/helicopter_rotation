@@ -1,0 +1,45 @@
+{
+    "folders": [
+
+		{
+			"path": "."
+		},
+		{
+			"path": "../mtb_shared"
+		}
+    ],
+    "settings": {
+        //mtb//  If this project will be shared with multiple users, the
+        //mtb//  modustoolbox.toolsPath property must be placed in user settings
+        //mtb//  file instead of this file.  The user settings file location for
+        //mtb//  VSCode depends on your OS:
+        //mtb//
+        //mtb//      Windows: %APPDATA%\Code\User\settings.json
+        //mtb//      macOS  : $HOME/Library/Application Support/Code/User/settings.json
+        //mtb//      Linux  : $HOME/.config/Code/User/settings.json
+        //mtb//
+        "modustoolbox.toolsPath": "C:/Users/12944/ModusToolbox/tools_3.5",
+        "cortex-debug.armToolchainPath": "C:/Users/12944/Infineon/Tools/mtb-gcc-arm-eabi/11.3.1/gcc/bin",
+        "cortex-debug.openocdPath": "${config:modustoolbox.toolsPath}/../../../../Infineon/Tools/ModusToolboxProgtools-1.4/openocd/bin/openocd.exe",
+        "cortex-debug.JLinkGDBServerPath.windows": "C:/Program Files/SEGGER/JLink/JLinkGDBServerCL.exe",
+        "cortex-debug.JLinkGDBServerPath.osx": "/Applications/SEGGER/JLink/JLinkGDBServerCLExe",
+        "cortex-debug.JLinkGDBServerPath.linux": "JLinkGDBServerCLExe",
+        "files.associations": {
+            "*.c": "c",
+            "cycfg_notices.h": "c",
+            "cycfg_routing.h": "c",
+            "cybsp.h": "c",
+            "xmc_uart.h": "c",
+            "cycfg_peripherals.h": "c",
+            "core_cm0.h": "c",
+            "stdint.h": "c"
+        },
+        "clangd.arguments": [
+            "--background-index",
+            "--query-driver=C:/Users/12944/Infineon/Tools/mtb-gcc-arm-eabi/11.3.1/gcc/bin/arm-none-eabi-*"
+        ]
+    },
+    "extensions": {
+        "recommendations": [ "marus25.cortex-debug", "ms-vscode.cpptools", "dan-c-underwood.arm" ]
+    }
+}
