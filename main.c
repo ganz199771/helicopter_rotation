@@ -372,8 +372,11 @@ int main(void)
         cycle_times++;
 
         res_digit = XMC_VADC_GROUP_GetResult(VADC_G0, 5);
-        res_voltage = 5.0f * res_digit / 4096; /* 当res_digit等于4096时，res_voltage等于5V，此时可调电阻R=0Ω */
-        res_ohm = 5.0f * R1 / res_voltage - R1; /* 当res_digit等于2048时，res_voltage等于2.5V，此时可调电阻R=10kΩ */
+        /* 当res_digit等于4096时，res_voltage等于5V，此时可调电阻R=0Ω；
+        当res_digit等于2048时，res_voltage等于2.5V，此时可调电阻R=10kΩ */
+        res_voltage = 5.0f * res_digit / 4096; 
+
+        res_ohm = 5.0f * R1 / res_voltage - R1;
         update_pwm_compare(); /* 更新PWM比较寄存器 */
 
         if(cycle_times == 1000)
